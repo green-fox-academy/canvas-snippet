@@ -1,1 +1,49 @@
-szia
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h1>Az elso honpaom</h1>
+    <canvas class="canvas" width="500px" height="600px"></canvas>
+  </body>
+  <script>
+      var canvas = document.querySelector(".canvas");
+      var c = canvas.getContext("2d");
+      
+        /*
+        ide
+        */
+
+       console.log("szia")
+
+       c.fillStyle = "limegreen";
+       var n = 5;
+       var size = 20;
+       var w = c.canvas.width;
+       var h = c.canvas.height;
+       
+       for (var i = 0; i < n; i = i + 1) {
+         var x = (w - size) * Math.random();
+         var y = (h - size) * Math.random();
+         fillFox(x, y, size);
+       }
+       
+       function fillFox(x, y, s) {
+         c.beginPath();
+         c.moveTo(x, y+s/7*3);
+         c.lineTo(x+s/7*2, y);
+         c.lineTo(x+s/7*3, y+s/7*2);
+         c.lineTo(x+s/7*4, y+s/7*2);
+         c.lineTo(x+s/7*5, y);
+         c.lineTo(x+s, y+s/7*3);
+         c.lineTo(x+s/2, y+s);
+         c.lineTo(x, y+s/7*3);
+         c.fill();
+       }
+
+  </script>
+
+</html>
