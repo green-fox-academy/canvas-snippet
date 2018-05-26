@@ -4,9 +4,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+
   </head>
   <body>
-      <h1>Az elso honpaom</h1>
+    <h1>Az elso honlapom</h1>
     <canvas class="canvas" width="500px" height="600px"></canvas>
   </body>
   <script>
@@ -16,34 +22,20 @@
         /*
         ide
         */
+        var size = 80;
+        var offset = 20;
 
-       console.log("szia")
+        c.fillStyle ="blue";
 
-       c.fillStyle = "limegreen";
-       var n = 5;
-       var size = 20;
-       var w = c.canvas.width;
-       var h = c.canvas.height;
+        c.fillRect(offset, offset, size, size);
+        offset = offset + 40;
+        c.fillRect(offset, offset, size, size);
+        offset = offset + 40;
+        c.fillRect(offset, offset, size, size);
+
        
-       for (var i = 0; i < n; i = i + 1) {
-         var x = (w - size) * Math.random();
-         var y = (h - size) * Math.random();
-         fillFox(x, y, size);
-       }
-       
-       function fillFox(x, y, s) {
-         c.beginPath();
-         c.moveTo(x, y+s/7*3);
-         c.lineTo(x+s/7*2, y);
-         c.lineTo(x+s/7*3, y+s/7*2);
-         c.lineTo(x+s/7*4, y+s/7*2);
-         c.lineTo(x+s/7*5, y);
-         c.lineTo(x+s, y+s/7*3);
-         c.lineTo(x+s/2, y+s);
-         c.lineTo(x, y+s/7*3);
-         c.fill();
-       }
 
   </script>
 
 </html>
+
